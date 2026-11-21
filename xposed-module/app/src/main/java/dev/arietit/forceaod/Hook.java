@@ -50,7 +50,7 @@ public class Hook implements IXposedHookLoadPackage {
         if (cr == null) return false;
         BUSY.set(true);
         try {
-            return Settings.System.getIntForUser(cr, TOGGLE, 1, user) == 1;
+            return ((Integer) XposedHelpers.callStaticMethod(Settings.System.class, "getIntForUser", cr, TOGGLE, 1, user)) == 1;
         } catch (Throwable t) {
             return false;
         } finally {
