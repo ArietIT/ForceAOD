@@ -1,0 +1,6 @@
+id=force_aod
+name=Force AOD (One UI)
+version=v1.0
+versionCode=1
+author=ArietIT
+description=Принудительно включает AOD на Samsung One UI 9 (работает вместе с LSPosed-модулем ForceAOD). Тумблер: кнопка Action.
