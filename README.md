@@ -17,3 +17,7 @@
 ## Отладка
 В `Hook.java` поставь `PROBE = true`, пересобери, смотри `adb logcat -s ForceAOD`, пока экран гаснет:
 увидишь, какие ключи Settings.System читает aodservice, и добавь нужные в `FORCE`.
+
+## CI
+GitHub Actions (`.github/workflows/build.yml`) собирает APK и `ForceAOD-ksu.zip` на каждый push в `main`
+(Actions → run → Artifacts). Тег `v*` (например `git tag v1.0 && git push origin v1.0`) создаёт Release с файлами.
